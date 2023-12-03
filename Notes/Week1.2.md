@@ -264,6 +264,7 @@ This is better because- we put similar content within a single Variable and logi
 #### Functions in JavaScript
 
 `Functions`
+
 Read more about Functions on [MDN WEB DOCS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 
 - Abstract out Logic in your program
@@ -400,3 +401,5 @@ console.log(value);
 ```
 
 The above three shared functions help us to explain what are callback functions. How they are helpful and helps makes our code more modular. All these changes help achieve separation of concerns and makes each function perform a specific task, enhancing code organization.
+
+**NOTE** - `There are a couple of sections that were not covered in the live lecture as mentioned above for which there might be offline classes/maybe to be covered in the next week's live classes. So, will keep updating this as soon as the content is posted further!`
