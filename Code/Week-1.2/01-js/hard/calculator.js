@@ -16,6 +16,45 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor(result) {
+    this.result = 0;
+  }
+  add(inputNumber) {
+    if (typeof inputNumber === "number") {
+      return this.result += inputNumber;
+    }
+  }
+  subtract(inputNumber) {
+    if (typeof inputNumber === "number") {
+      return this.result -= inputNumber;
+    }
+  }
+  multiply(inputNumber) {
+    if (typeof inputNumber === "number") {
+      return this.result *= inputNumber;
+    }
+  }
+  divide(inputNumber) {
+    if (typeof inputNumber === "number" && inputNumber !== 0) {
+      return this.result /= inputNumber
+    }
+    throw new Error;
+  }
+  clear() {
+    return this.result = 0;
+  }
+  getResult() {
+    return this.result;
+  }
+  calculate(arithmeticOperation) {
+    const expression = arithmeticOperation.trim();
+    this.result = eval(expression);
+    if (this.result === Infinity) {
+      throw new Error;
+    }
+    return this.result;
+  }
+}
 
 module.exports = Calculator;
