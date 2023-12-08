@@ -5,7 +5,13 @@
 ### Things we will cover in this week
 
 - String API Methods
--
+- Number API Methods
+- Array and its methods
+- Classes
+- Date Class and its methods
+- Understand JSON
+- Learn about Math class and it's available methods
+- Object and its methods
 
 ### Episode Theory
 
