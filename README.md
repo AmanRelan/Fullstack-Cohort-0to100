@@ -4,6 +4,5 @@ This repository tries to compile notes and answer questions/bounties/any other c
 
 #### Pending
 
-- Week 1.5
 - Week 0 Complete Zerodha Page
 - Bounty Week 0(Unofficial Announcement Discord)
