@@ -3,4 +3,10 @@
 */
 
 function wait(n) {
+    return new Promise(function (resolve, reject) {
+        setTimeout(function () { resolve("I am resolved!!!") }, n * 1000)
+    });
 }
+
+const ans = wait(2);
+ans.then(function (resolvedValue) { return resolvedValue });
