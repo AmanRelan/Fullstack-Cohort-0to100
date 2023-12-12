@@ -4,9 +4,15 @@
 
 function wait(n) {
     return new Promise(function (resolve, reject) {
-        setTimeout(function () { resolve("I am resolved!!!") }, n * 1000)
+        setTimeout(function () { resolve() }, n * 1000)
     });
 }
 
+const startTime = new Date().getTime();
 const ans = wait(2);
-ans.then(function (resolvedValue) { return resolvedValue });
+ans.then(function (resolvedValue) {
+    const endTime = new Date().getTime();
+    const difference = endTime - startTime;
+    return difference;
+});
+module.exports = wait;

@@ -4,25 +4,32 @@
  * Print how long it took for all 3 promises to resolve.
 */
 
-function waitOneSecond(seconds) {
-    return wait(seconds);
-}
+// function waitOneSecond(seconds) {
+//     return new Promise(function (resolve, reject) {
+//         setTimeout(function () { resolve(`I am resolved in ${seconds} seconds!!!`) }, seconds * 1000)
+//     });
+// }
 
-function waitTwoSecond(seconds) {
-    return wait(seconds);
-}
+// function waitTwoSecond(seconds) {
+//     return new Promise(function (resolve, reject) {
+//         setTimeout(function () { resolve(`I am resolved in ${seconds} seconds!!!`) }, seconds * 1000)
+//     });
+// }
 
-function waitThreeSecond(seconds) {
-    return wait(seconds);
-}
+// function waitThreeSecond(seconds) {
+//     return new Promise(function (resolve, reject) {
+//         setTimeout(function () { resolve(`I am resolved in ${seconds} seconds!!!`) }, seconds * 1000)
+//     });
+// }
 
 function calculateTime(a, b, c) {
-    const beforeInitializationTime = new Date().getTime();
-    Promise.all([waitOneSecond(a), waitTwoSecond(b), waitThreeSecond(c)]).then((values) => {
-        console.log(values);
-        const afterCompletionOfPromise = new Date().getTime();
-        console.log("Total Time Taken:- ", (afterCompletionOfPromise - beforeInitializationTime) / 1000, "seconds");
-
+    return new Promise(function (resolve, reject) {
+        const beforeInitializationTime = new Date().getTime();
+        Promise.all([wait(a), wait(b), wait(c)]).then((values) => {
+            const afterCompletionOfPromise = new Date().getTime();
+            const difference = afterCompletionOfPromise - beforeInitializationTime;
+            resolve(difference);
+        });
     });
 }
 function wait(n) {
@@ -32,3 +39,4 @@ function wait(n) {
 }
 
 // The total time it took in this case is 3.013s
+module.exports = calculateTime;
