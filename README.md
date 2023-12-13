@@ -7,6 +7,6 @@ This repository tries to compile notes and answer questions/bounties/any other c
 - Week 0 Complete Zerodha Page --> Done
 - Bounty Week 0(Unofficial Announcement Discord)
 - Week 2 Assignment working with test cases passing --> Done
-- Q & A session on week 2.1
+- Q & A session on week 2.1 --> Done
 - Week 2.2
 - Async/Await & Promise APIs Interview Question videos
