@@ -14,13 +14,13 @@
 - JS Functions(map, filter)
 - Assignment
 
-#### 3 big humps in Full stack development
+### 3 big humps in Full stack development
 
 - Async Nature of JS
 - React
 - JS To TS
 
-#### What we need to know before we proceed to HTTP?
+### What we need to know before we proceed to HTTP?
 
 - Callback Functions - **DEFINITELY**
 -
