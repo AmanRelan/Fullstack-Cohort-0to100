@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const API_URL = "https://fakerapi.it/api/v1/persons";
+      // Promise Function
+      //   function getUserData() {
+      //     const response = fetch(API_URL);
+      //     response
+      //       .then((userData) => {
+      //         userData.json().then((finalData) => {
+      //           console.log(finalData);
+      //         });
+      //       })
+      //       .catch((error) => console.log(error));
+      //   }
+
+      //CLEANER ASYNC WAY
+      async function getUserData() {
+        const response = await fetch(API_URL);
+        const finalData = await response.json();
+        console.log(finalData);
+      }
+    </script>
+    <button onclick="getUserData()">Get User Data</button>
+  </body>
+</html>
