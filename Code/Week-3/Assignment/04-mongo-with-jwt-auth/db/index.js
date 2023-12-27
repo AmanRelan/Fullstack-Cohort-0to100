@@ -1,18 +1,20 @@
 const mongoose = require('mongoose')
 
 mongoose
-  .connect('<mongourl>')
+  .connect('<mongo-url>')
   .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.error('MongoDB connection error:', err))
 
 const AdminSchema = new mongoose.Schema({
   username: String,
   password: String,
+  token: String,
 })
 
 const UserSchema = new mongoose.Schema({
   username: String,
   password: String,
+  token: String,
   purchasedCourses: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }],
 })
 
