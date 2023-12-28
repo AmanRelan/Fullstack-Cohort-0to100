@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  async function callAPIForData(){
+    const a = document.getElementById('interest-rate').value; // String
+    const b = document.getElementById('amount').value; // String
+    const c = document.getElementById('timeInYears').value; // String
+    const response = await fetch(`http://localhost:3000/simple-interest/?interestRate=${a}&principalAmount=${b}&timeInYears=${c}`)
+    const data = await response.json();
+    
+    const interestAmountDiv = document.getElementById('interest-amount')
+    const totalInterestAmount = document.getElementById('total-interest-earned')
+
+    totalInterestAmount.innerHTML = `Your Money after simple interest is now equal to :- ${data.total}`;
+    interestAmountDiv.innerHTML = `The total interest earned all this time is:- ${data.interestAmount}`;
+  }
+</script>
+
+<body>
+  <div><input type="text" placeholder="Enter Interest Rate" id="interest-rate"/></div>
+  <div><input type="text" placeholder="Enter Principal Amount" id="amount" /></div>
+  <div><input type="text" placeholder="Enter Time Span in years" id="timeInYears" /></div> <br>
+  <button onclick="callAPIForData()">Calculate Simple Interest</button>
+  <div>
+    <h3 id="interest-amount"></h3>
+    <h4 id="total-interest-earned"></h4>
+  </div>
+</body>
+
+</html>

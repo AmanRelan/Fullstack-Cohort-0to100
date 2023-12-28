@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  function populateDiv(){
+    // Global Document API
+    const a = document.getElementById('firstNumber').value; // String
+    const b = document.getElementById('secondNumber').value; // String
+
+    const element = document.getElementById('finalSum');
+    
+    //fetch
+    const response = fetch('https://sum-server.100xdevs.com/sum?a='+ a + '&b=' + b)
+    // console.log(element); -> This gives you a DOM object and not a HTML, but an object reference to the HTML
+    //Convert String to Number
+    response
+    .then((response) => response.text()
+                          .then((ans) => console.log(ans))
+                          .catch((err) => console.log(err)));
+  }
+  async function populateDiv2(){
+    const a = document.getElementById('firstNumber').value; // String
+    const b = document.getElementById('secondNumber').value; // String
+
+    const response = await fetch('https://sum-server.100xdevs.com/sum?a='+ a + '&b=' + b)
+    const ans = await response.text();
+    document.getElementById('finalSum').innerHTML = ans;
+  }
+</script>
+<body>
+  <div><input id="firstNumber" type="text" placeholder="number 1" /></div><br>
+  <div><input id="secondNumber" type="text" placeholder="number 2"/></div><br>
+  <button onclick="populateDiv2()"> Calculate Sum</button>
+  <div id="finalSum"></div>
+</body>
+</html>

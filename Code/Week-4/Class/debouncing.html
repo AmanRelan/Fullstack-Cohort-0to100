@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script> 
+  // wait for 100ms before each call/ delay the call to populateDiv for 100ms
+  let timeout;
+  function debouncedPopulateDiv(){
+    // Cancel a clock
+    clearTimeout(timeout);
+
+    // Start a clock
+    timeout = setTimeout(function(){populateDiv2()},1000)
+
+  }
+  async function populateDiv2(){
+    const a = document.getElementById('firstNumber').value; // String
+    const b = document.getElementById('secondNumber').value; // String
+
+    const response = await fetch('https://sum-server.100xdevs.com/sum?a='+ a + '&b=' + b)
+    const ans = await response.text();
+    document.getElementById('finalSum').innerHTML = ans;
+  }
+</script>
+<body>
+  <div><input id="firstNumber" type="text" placeholder="number 1" oninput="debouncedPopulateDiv()" /></div><br>
+  <div><input id="secondNumber" type="text" placeholder="number 2" oninput="debouncedPopulateDiv()"/></div><br>
+  <div id="finalSum"></div>
+</body>
+</html>
