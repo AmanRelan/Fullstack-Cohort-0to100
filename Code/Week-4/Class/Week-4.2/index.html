@@ -1,0 +1,42 @@
+<!-- Creating a todo Application -->
+<html>
+  <script>
+    let globalId = 1;
+    function markAsDone(id){
+      const parentElement = document.getElementById(id);
+      parentElement.children[2].innerHTML = "DONE!!"
+    }
+
+    function createChild(title, description, id) {
+      const outerDiv = document.createElement("div");
+      const titleDiv = document.createElement("div");
+      titleDiv.innerHTML = title;
+      const descriptionDiv = document.createElement("div");
+      descriptionDiv.innerHTML = description;
+      const todoDoneButton = document.createElement("button");
+      todoDoneButton.innerHTML = 'Mark as Done';
+      todoDoneButton.setAttribute("onclick", `markAsDone(${id})`)
+      outerDiv.appendChild(titleDiv);
+      outerDiv.appendChild(descriptionDiv);
+      outerDiv.appendChild(todoDoneButton);
+      outerDiv.setAttribute("id", id);
+
+      return outerDiv;
+    }
+    function addTodo(){
+      const title = document.getElementById('todo-title').value;
+      const description = document.getElementById('todo-description').value;
+      const container = document.getElementById('container')
+      
+      //Create Element
+      container.appendChild(createChild(title, description, globalId++));
+    }
+  </script>
+  <div>
+    <input type="text" name="title" id="todo-title" placeholder="Add Title for todo"><br>
+    <input type="text" name="Description" id="todo-description" placeholder="Add Description for todo"><br>
+    <button onclick="addTodo()">Add Todo</button>
+    <div id="container">
+    </div>
+  </div>
+</html>
