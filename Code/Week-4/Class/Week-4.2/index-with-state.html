@@ -1,0 +1,49 @@
+<!-- Creating a todo Application -->
+<html>
+  <div>
+    <div>
+      <input type="text" name="title" id="todo-title" placeholder="Add Title for todo">
+    </div> <br> <br>
+    <input type="text" name="Description" id="todo-description" placeholder="Add Description for todo"><br><br>
+    <div id="container">
+    </div>
+  </div>
+    <script>
+    let globalId = 1;
+    function markAsDone(id){
+      const parentElement = document.getElementById(id);
+      parentElement.children[2].innerHTML = "DONE!!"
+    }
+
+    function createChild(title, description, id) {
+      const outerDiv = document.createElement("div");
+      const titleDiv = document.createElement("div");
+      titleDiv.innerHTML = title;
+      const descriptionDiv = document.createElement("div");
+      descriptionDiv.innerHTML = description;
+      const todoDoneButton = document.createElement("button");
+      todoDoneButton.innerHTML = 'Mark as Done';
+      todoDoneButton.setAttribute("onclick", `markAsDone(${id})`)
+      outerDiv.appendChild(titleDiv);
+      outerDiv.appendChild(descriptionDiv);
+      outerDiv.appendChild(todoDoneButton);
+      outerDiv.setAttribute("id", id);
+
+      return outerDiv;
+    }
+    function updateDOMWithState(state){
+      const parentElement = document.getElementById('container');
+      parentElement.innerHTML = '';
+      for(let i = 0; i < state.length; i++){
+        const child = createChild(state[i].title, state[i].description, globalId++);
+        parentElement.appendChild(child);
+      }
+    }
+    updateDOMWithState([
+      {
+        "title": "Gym",
+        "description":  "Go to gym from 5-7 PM"
+      }
+    ]);
+  </script>
+</html>
