@@ -7,33 +7,49 @@
     let todoState = [];
     let oldTodoState = [];
 
-    function addTodoToDom() {
-      
+    function addTodoToDom(todo) {
+      const todoContainer = document.getElementById("todos");
+      const todoElement = document.createElement("div");
+      todoElement.setAttribute("id", "todo-" + todo.id);
+      todoElement.innerHTML = `<h3>${todo.title}</h3><p>${todo.description}</p>`;
+      todoContainer.appendChild(todoElement);
     }
 
     function removeTodoFromDom(todo) {
-      
+      const todoElement = document.getElementById("todo-" + todoId);
+      if (todoElement) {
+        todoElement.remove();
+      }
     }
 
     function updateTodoInDom(oldTodo, newTodo) {
-        
+      const todoElement = document.getElementById("todo-" + oldTodo.id);
+      if (todoElement) {
+        todoElement.innerHTML = `<h3>${newTodo.title}</h3><p>${newTodo.description}</p>`;
+      }
     }
 
     function updateState(newTodos) {
-      // calculate the diff b/w newTodos and oldTodos.
-      // More specifically, find out what todos are - 
-      // 1. added
-      // 2. deleted
-      // 3. updated
-      const added = [];
-      const deleted = [];
-      const updated = [];
-      // calculate these 3 arrays
-      // call addTodo, removeTodo, updateTodo functions on each of the
-      // elements
-      oldTodoState = newTodos;
+      const newIds = new Set(newTodos.map(todo => todo.id));
+      const oldIds = new Set(oldTodoState.map(todo => todo.id));
+
+      const added = newTodos.filter(todo => !oldIds.has(todo.id));
+      const deleted = oldTodoState.filter(todo => !newIds.has(todo.id));
+      const updated = newTodos.filter(todo => oldIds.has(todo.id) && !todoEquals(todo, oldTodoState.find(t => t.id === todo.id)));
+
+      added.forEach(addTodoToDom);
+      deleted.forEach(todo => removeTodoFromDom(todo.id));
+      updated.forEach(newTodo => {
+        const oldTodo = oldTodoState.find(t => t.id === newTodo.id);
+        updateTodoInDom(oldTodo, newTodo);
+      });
+
+      oldTodoState = [...newTodos];
     }
 
+    function todoEquals(todo1, todo2) {
+      return todo1.id === todo2.id && todo1.title === todo2.title && todo1.description === todo2.description;
+    }
     function addTodo() {
       const title = document.getElementById("title").value;
       const description = document.getElementById("description").value;
