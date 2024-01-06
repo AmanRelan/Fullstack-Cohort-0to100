@@ -1,5 +1,8 @@
 # WEEK 3.1
 
+## Notes From Cohort by TAs
+You can find the notes for this week created by TAs that covers `Middlewares, Global Catches & Zod` can be found [here](https://quickest-juniper-f9c.notion.site/Week-3-1-Middlewares-Global-Catches-Zod-07fd5c5d55184ce3a6f3b4b1fc7c4aec)
+
 ## Prerequisites for this week
 
 - Week 2.7 video

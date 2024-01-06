@@ -1,5 +1,8 @@
 # WEEK 3.5
 
+## Notes From Cohort by TAs
+You can find the notes for this week created by TAs that covers `Document Object Model (Laisha)` can be found [here](https://quickest-juniper-f9c.notion.site/Week-3-5-Document-Object-Model-Laisha-a22dfeab1af84ec4b453ca565c57b27a)
+
 ### Things we will cover in this week.
 
 - DOM(Document Object Model)

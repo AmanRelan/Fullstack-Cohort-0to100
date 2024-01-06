@@ -1,5 +1,8 @@
 # WEEK 3.2
 
+## Notes From Cohort by TAs
+You can find the notes for this week created by TAs that covers `Authentication & Databases` can be found [here](https://quickest-juniper-f9c.notion.site/Week-3-2-Authentication-Databases-1687613863384e9792097c8d5cb5340e)
+
 ## Prerequisites for this week
 
 - Week 3.0.7/3.0.8 video and DB strings for connection

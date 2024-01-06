@@ -1,5 +1,8 @@
 # WEEK 4.1
 
+## Notes From Cohort by TAs
+You can find the notes for this week created by TAs that covers `Introduction to DOM` can be found [here](https://quickest-juniper-f9c.notion.site/Week-4-1-Introduction-to-DOM-647987d9b1894c54ba5c822978377910)
+
 ### Things we will cover in this week
 
 - DOM

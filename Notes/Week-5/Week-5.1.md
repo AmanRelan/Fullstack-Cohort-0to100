@@ -1,5 +1,8 @@
 # WEEK 5.1
 
+## Notes From Cohort by TAs
+You can find the notes for this week created by TAs that covers `Diving into React` can be found [here](https://quickest-juniper-f9c.notion.site/Week-5-1-Diving-into-React-2608ec1c57c04710844f7b8682beecd8)
+
 ### Things we will cover in this week
 
 - React deep dive
