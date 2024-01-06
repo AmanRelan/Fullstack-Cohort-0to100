@@ -1,5 +1,8 @@
 # WEEK 4.2
 
+## Notes From Cohort by TAs
+You can find the notes for this week created by TAs that covers `Reconcilers & Intro to React` can be found [here](https://quickest-juniper-f9c.notion.site/Week-4-2-Reconcilers-Intro-to-React-1674c2371f7c477e80ca42a0c673c11f)
+
 ### Prerequisites
 - DOM manipulation
 - Debouncing
