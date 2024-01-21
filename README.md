@@ -10,6 +10,7 @@ This repository tries to compile notes and answer questions/bounties/any other c
 - [Week-6 - React Deep Dive](https://github.com/AmanRelan/Week-6-cohort-2.0)
 - [Week-7 - Routing + Week-7 Assignment](https://github.com/AmanRelan/Week-7-Cohort-2.0)
 - [Week-8 - Learning Tailwindcss and creating clone for Dukaan](https://github.com/AmanRelan/Dukaan-Tailwindcss-Clone)
+- [Week-8.2 - Built Payment Application(backend)](https://github.com/AmanRelan/payment-application)
 
 #### Pending
 
@@ -17,3 +18,4 @@ This repository tries to compile notes and answer questions/bounties/any other c
 - Dukaan Clone
 - Starbucks Rewards Page(week-6 neutrinos)
 - Week-7 assignment(question-3)
+- Week-8 Payment Application Backend
