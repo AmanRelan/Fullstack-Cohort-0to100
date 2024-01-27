@@ -1,5 +1,9 @@
 # WEEK 8.1
 
+## Notes From Cohort by TAs
+
+You can find the notes for this week created by TAs that covers `TailwindCss` can be found [here](https://quickest-juniper-f9c.notion.site/Week-8-1-Tailwind-fbd2137158cf418ca9eb7d15030c1d67)
+
 ### Things we will cover in this week
 
 - Flex
