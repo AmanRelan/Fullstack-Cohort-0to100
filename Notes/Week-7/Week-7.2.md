@@ -4,6 +4,10 @@
 
 Visit the REPOSITORY to check the code here - [WEEK-7](https://github.com/AmanRelan/Week-7-Cohort-2.0)
 
+## Notes From Cohort by TAs
+
+You can find the notes for this week created by TAs that covers `Context API, prop drilling` can be found [here](https://quickest-juniper-f9c.notion.site/Week-7-2-7c0b8a9a23664a229446e4edcba5c3cb)
+
 ### Things we will cover in this week
 
 - Context
