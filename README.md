@@ -20,4 +20,5 @@ This repository tries to compile notes and answer questions/bounties/any other c
 - Starbucks Rewards Page(week-6 neutrinos)
 - ~~Week-7 assignment(question-3)~~
 - ~~Week-8 Payment Application Backend~~
-- Week-8 Payment Application Frontend
+- ~~Week-8 Payment Application Frontend~~
+- Week 9.1
