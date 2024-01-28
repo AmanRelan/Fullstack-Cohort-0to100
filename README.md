@@ -11,7 +11,7 @@ This repository tries to compile notes and answer questions/bounties/any other c
 - [Week-7 - Routing + Week-7 Assignment](https://github.com/AmanRelan/Week-7-Cohort-2.0)
 - [Week-7.4 - Recoil Deep Dive](https://github.com/AmanRelan/Recoil-Deep-Dive)
 - [Week-8 - Learning Tailwindcss and creating clone for Dukaan](https://github.com/AmanRelan/Dukaan-Tailwindcss-Clone)
-- [Week-8.2 - Built Payment Application(backend)](https://github.com/AmanRelan/payment-application)
+- [Week-8.2/8.4 - Built Payment Application(full stack- backend + frontend)](https://github.com/AmanRelan/payment-application)
 
 #### Pending
 
